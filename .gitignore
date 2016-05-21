@@ -5,6 +5,7 @@
 # Xcode
 #
 build/
+main.jsbundle
 *.pbxuser
 !default.pbxuser
 *.mode1v3
