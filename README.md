@@ -7,7 +7,7 @@
 - (set up [React-Native env](http://facebook.github.io/react-native/docs/getting-started.html) if you have not yet.)
 - `npm i` (or `cnpm i` if you against GFW)
 - `npm start`
-- `react-native run-ios`
+- `react-native run-ios` (tip: `Cmd + D` to enable **hot reloading**)
 
 ## Development
 
@@ -20,3 +20,5 @@ Thanks to [ESLint rules](http://eslint.org/docs/2.0.0/rules/) & [airbnb/javascri
 ### Build
 
 - `npm run bundle`
+- `open ios/FaceHub.xcodeproj`
+- use `Cmd + R` to run on device.
