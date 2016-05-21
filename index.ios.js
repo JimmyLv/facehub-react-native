@@ -7,6 +7,6 @@
 import App from './js/App'
 import {
   AppRegistry
-} from 'react-native';
+} from 'react-native'
 
-AppRegistry.registerComponent('FaceHub', () => App);
+AppRegistry.registerComponent('FaceHub', () => App)

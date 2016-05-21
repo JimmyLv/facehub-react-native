@@ -1,21 +1,9 @@
-import React, {
-  Component
-} from 'react';
-
+import React from 'react'
 import {
   StyleSheet,
   Text,
-  View,
-  StatusBar,
-} from 'react-native';
-
-export default function NavBar() {
-  return (
-    <View style={styles.navBar}>
-      <Text style={styles.navBarTitle}>ThoughtWorks</Text>
-    </View>
-  )
-}
+  View
+} from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -41,4 +29,11 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold'
   }
-});
+})
+
+const NavBar = () => (
+  <View style={styles.navBar}>
+    <Text style={styles.navBarTitle}>ThoughtWorks</Text>
+  </View>
+)
+export default NavBar
