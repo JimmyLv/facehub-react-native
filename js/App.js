@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {
   View,
   StyleSheet,
-  ScrollView,
   ListView
 } from 'react-native'
 
