@@ -2,6 +2,8 @@
 
 > This is a FaceHub mobile client by using React Native, Redux, Flex, Flow tech stack, and etc. Thanks @Facebook
 
+[![Build Status](https://travis-ci.org/JimmyLv/facehub-react-native.svg?branch=master)](https://travis-ci.org/JimmyLv/facehub-react-native)
+
 ## Getting Started
 
 - (set up [React-Native env](http://facebook.github.io/react-native/docs/getting-started.html) if you have not yet.)
@@ -13,7 +15,7 @@
 
 ### StyleGuide
 
-- `npm run lint` (or set up in awesome [IDEA](https://www.jetbrains.com/idea/))
+- `npm run lint` (or set up in awesome [IDEA](https://www.jetbrains.com/idea/) directly)
 
 Thanks to [ESLint rules](http://eslint.org/docs/2.0.0/rules/) & [airbnb/javascript/react](https://github.com/airbnb/javascript/blob/master/react/README.md)
 

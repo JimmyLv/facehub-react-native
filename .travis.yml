@@ -1,0 +1,13 @@
+sudo: false
+branches:
+  only:
+    - gh-pages
+language: node_js
+node_js:
+  - stable
+script:
+  - npm install
+  - npm run lint
+cache:
+  directories:
+    - node_modules
