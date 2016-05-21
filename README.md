@@ -1,6 +1,6 @@
 # FaceHub
 
-> This is a FaceHub mobile client by using React Native, Redux, Flex, Flow tech stack, and etc. Thanks @Facebook
+> This is a FaceHub mobile client by using React Native, Redux, Flex, Flow tech stack, and etc.
 
 [![Build Status](https://travis-ci.org/JimmyLv/facehub-react-native.svg?branch=master)](https://travis-ci.org/JimmyLv/facehub-react-native)
 
