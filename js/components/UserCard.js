@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import {
   View,
   StyleSheet,
@@ -48,21 +48,44 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2
     }
+  },
+  nameAndOffice: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  officeWrapper: {
+    backgroundColor: '#F50057',
+    marginLeft: 20,
+    alignItems: 'center',
+    borderRadius: 5
+  },
+  office: {
+    color: 'white',
+    margin: 5
   }
 })
 
-const UserCard = () => (
+const UserCard = ({ user }) => (
   <View style={[styles.card, styles.shadow]}>
     <Image
       style={styles.avatar}
-      source={{ uri: 'http://nobackend.website/_ng/images/avatar.jpg' }}
+      source={{ uri: user.avatar }}
     />
     <View style={styles.textWrapper}>
-      <Text style={styles.name}>Jimmy</Text>
-      <Text style={styles.job}>Dev on Suncorp</Text>
-      <Text style={styles.email}>jinglv@thoughtworks.com</Text>
+      <View style={styles.nameAndOffice}>
+        <Text style={styles.name}>{user.name}</Text>
+        <View style={styles.officeWrapper}>
+          <Text style={styles.office}>{user.office}</Text>
+        </View>
+      </View>
+      <Text style={styles.job}>{user.title} on {user.project}</Text>
+      <Text style={styles.email}>{user.email}</Text>
     </View>
   </View>
 )
+
+UserCard.propTypes = {
+  user: PropTypes.object.isRequired
+}
 
 export default UserCard
