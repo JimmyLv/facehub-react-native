@@ -36,4 +36,5 @@ const NavBar = () => (
     <Text style={styles.navBarTitle}>ThoughtWorks</Text>
   </View>
 )
+
 export default NavBar
