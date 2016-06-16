@@ -1,10 +1,5 @@
 import React, { PropTypes } from 'react'
-import {
-  View,
-  StyleSheet,
-  Image,
-  Text,
-} from 'react-native'
+import { View, StyleSheet, Image, Text, TouchableOpacity } from 'react-native'
 
 const styles = StyleSheet.create({
   name: {
@@ -65,8 +60,11 @@ const styles = StyleSheet.create({
   }
 })
 
-const UserCard = ({ user }) => (
-  <View style={[styles.card, styles.shadow]}>
+const UserCard = ({ user, navigator }) => (
+  <TouchableOpacity
+    style={[styles.card, styles.shadow]}
+    onPress={() => navigator.push({ page: 'profile' })}
+  >
     <Image
       style={styles.avatar}
       source={{ uri: user.avatar }}
@@ -81,11 +79,12 @@ const UserCard = ({ user }) => (
       <Text style={styles.job}>{user.title} on {user.project}</Text>
       <Text style={styles.email}>{user.email}</Text>
     </View>
-  </View>
+  </TouchableOpacity>
 )
 
 UserCard.propTypes = {
-  user: PropTypes.object.isRequired
+  user: PropTypes.object.isRequired,
+  navigator: PropTypes.object.isRequired
 }
 
 export default UserCard
