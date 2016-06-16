@@ -7,7 +7,6 @@ import {
   StyleSheet,
   TextInput,
   AlertIOS,
-  Image,
   View,
 } from 'react-native'
 
