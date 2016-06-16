@@ -8,8 +8,10 @@ import {
 } from 'react-native'
 
 import { userListAction } from './actions/userListAction'
+import { userFilterAction } from './actions/userFilterAction'
 import NavBar from './components/NavBar'
 import UserCard from './components/UserCard'
+import FilterPanel from './components/FilterPanel'
 
 const styles = StyleSheet.create({
   container: {
@@ -30,14 +32,17 @@ class App extends Component {
   }
 
   render() {
-    const ds = this.dataSource.cloneWithRows(this.props.userList)
+    const { userList, filter, filterUser } = this.props
+    const filteredList = filter === '' ? userList : userList.filter(item => item.office === filter)
+    const ds = this.dataSource.cloneWithRows(filteredList)
     return (
       <View style={styles.container}>
         <NavBar />
+        <FilterPanel action={filterUser} />
         <ListView
           enableEmptySections
           dataSource={ds}
-          renderRow={(user) => <UserCard user={user} />}
+          renderRow={user => <UserCard user={user} />}
         />
       </View>
     )
@@ -46,18 +51,22 @@ class App extends Component {
 
 App.propTypes = {
   userList: PropTypes.array.isRequired,
-  fetchUser: PropTypes.func.isRequired
+  fetchUser: PropTypes.func.isRequired,
+  filterUser: PropTypes.func.isRequired,
+  filter: PropTypes.string.isRequired
 }
 
 function mapProps(state) {
   return {
-    userList: state
+    userList: state.userList,
+    filter: state.filter
   }
 }
 
 function mapDispatch(dispatch) {
   return {
-    fetchUser: () => dispatch(userListAction())
+    fetchUser: () => dispatch(userListAction()),
+    filterUser: filter => dispatch(userFilterAction(filter))
   }
 }
 
