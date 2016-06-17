@@ -10,17 +10,15 @@ const styles = StyleSheet.create({
   }
 })
 
-class ProfilePage extends React.Component {
-  render() {
-    const { navigator } = this.props
-    return (
-      <View>
-        <TouchableOpacity style={styles.backButton} onPress={() => navigator.pop()}>
-          <Text>Back</Text>
-        </TouchableOpacity>
-      </View>
-    )
-  }
+const ProfilePage = () => {
+  const { navigator } = this.props
+  return (
+    <View>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigator.pop()}>
+        <Text>Back</Text>
+      </TouchableOpacity>
+    </View>
+  )
 }
 
 ProfilePage.propTypes = {
